@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Description:
+A random meme generator app that lets you be creative with your memes. It gives you a random image and lets you add you custom text to it to make the meme more fun and customized which you can then share with your friends. So the next time you share memes make sure its yours. 
+
 ## Available Scripts
 
 In the project directory, you can run:
