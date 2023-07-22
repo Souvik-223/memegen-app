@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar Component */
+.left-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  width: 30%;
+  height: 18%;
+  font-weight: 700;
+}
+
+.left-nav>h3 {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+
+.logo {
+  padding: 4%;
+  padding-top: 5%;
+  width: 40px;
+  height: 35px;
+  margin-left: 5%;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  background-image: linear-gradient(90deg, #672280 0%, #A626D3 100%);
   color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar>h4 {
+  padding-right: 3%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Generate Meme Component */
+main{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+}
+.form{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.input {
+  border: 3px solid #D5D4D8;
+  border-radius: 3%;
+  padding: 1rem;
+  width: 35vw;
+  font-weight: 600;
+}
+
+.generate-btn {
+  background-image: linear-gradient(90deg, #672280 0%, #A626D3 100%);
+  color: white;
+  padding: 1rem;
+  width: 80vw;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.generate-btn:hover{
+  background-image: linear-gradient(90deg, #ac3ad5 0%, #c831ff 100%);;
+}
+
+.img-meme{
+   max-width: 80vw;
+   margin-top: 5%;
+   contain: layout;
 }
