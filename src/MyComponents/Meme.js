@@ -1,13 +1,13 @@
 import React from "react"
 import Data from './Data'
 
-export default function Navbar() {
+export default function Meme() {
 
     //Getting and Showing the meme image from the api data
-    const {meme,setMeme} = React.useState({
+    const {meme,setmeme} = React.useState({
         topText : "",
         bottomText : "",
-        randomImage : ""
+        randomImage : "https://i.imgflip.com/30b1gx.jpg"
     })
 
     //meme image
@@ -17,7 +17,7 @@ export default function Navbar() {
         const randimg = allmemeImage.data.memes;
         const num = Math.floor(Math.random()*randimg.length);
         const url = randimg[num].url
-        setMeme(prevMeme => ({
+        setmeme(prevMeme => ({
             ...prevMeme,
             randomImage: url
         }))
@@ -31,7 +31,7 @@ export default function Navbar() {
             </from>
             <button className="generate-btn" onClick={memeGen}>Generate a new meme image 🖼️</button>
             <center>
-            <img src={meme} className="img-meme" alt="meme"></img>
+            <img src={meme.randomImage} className="img-meme" alt="meme"></img>
             </center>
         </main>
     )
