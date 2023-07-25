@@ -4,7 +4,7 @@ import Data from './Data'
 export default function Meme() {
 
     //Getting and Showing the meme image from the api data
-    const {meme,setmeme} = React.useState({
+    const [meme,setmeme] = React.useState({
         topText : "",
         bottomText : "",
         randomImage : "https://i.imgflip.com/30b1gx.jpg"
