@@ -70,6 +70,48 @@ main{
 
 .img-meme{
    max-width: 80vw;
-   margin-top: 5%;
-   contain: layout;
+   position: relative;
+}
+
+
+/* Text part of the memegen app */
+
+.meme{
+  position: relative;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+
+}
+
+.meme--text{
+  font-size: 2rem;
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  max-width: 80vw;
+  left: 20vw;
+  right: 20vw;
+  text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+
+}
+
+.top{
+  top:2rem;
+}
+
+.bottom{
+  bottom: 2rem;
 }
