@@ -1,5 +1,4 @@
 import React from "react"
-import Data from './Data'
 
 export default function Meme() {
 
@@ -11,7 +10,17 @@ export default function Meme() {
     })
 
     //meme image
-    const [allmemeImage, setmemeImage] = React.useState(Data)
+    const [allmemeImage, setmemeImage] = React.useState({})
+
+    React.useEffect(()=>{ 
+        // to use async function in useEffect we need to declare it within another function that gets called within use effect
+        async function get_meme(){
+            const res = await fetch("https://api.imgFlip.com/get_memes")
+            const data = await res.json()
+            setmemeImage(data)
+        }
+        get_meme()  // we need to call the function to use the async
+    },[])
 
     function memeGen() {
         const randimg = allmemeImage.data.memes;
